@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#180d27">
+  <title>20/10 — Gửi những điều dịu dàng</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
+  <div id="petalLayer" aria-hidden="true"></div>
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#hero" data-page="hero">
+      <span class="brand-flower">✿</span>
+      20/10 <span class="brand-dot">•</span> Món quà độc nhất
+    </a>
+
+    <div class="music-controls">
+      <button id="musicToggle" class="music-button" type="button"
+              aria-pressed="false">
+        ♫ Bật nhạc
+      </button>
+
+      <label class="volume-control" for="volumeSlider">
+        <span aria-hidden="true">♪</span>
+        <input id="volumeSlider" type="range"
+               min="0" max="100" value="35"
+               aria-label="Âm lượng">
+      </label>
+    </div>
+    <p id="musicStatus" class="music-status" role="status"
+       aria-live="polite"></p>
+  </header>
+
+  <!-- Đặt music.mp3 cùng thư mục với file này -->
+  <audio id="bgMusic" src="./music.mp3" preload="auto" loop></audio>
+
+  <main>
+    <!-- TRANG 1 -->
+    <section id="hero" class="page is-active hero-page">
+      <div class="hero-content">
+        <p class="eyebrow">GỬI ĐẾN NHỮNG BÔNG HOA CỦA LỚP 910</p>
+
+        <h1>Chúc mừng <span>20/10</span></h1>
+
+        <p class="hero-subtitle">
+          Mong mỗi ngày của bạn đều có một điều nhỏ bé khiến bạn mỉm cười.
+        </p>
+
+        <div class="tulip-garden" aria-label="Ba bông hoa tulip">
+          <div class="tulip tulip-left">
+            <span class="tulip-flower"></span>
+            <span class="tulip-stem"></span>
+            <span class="tulip-leaf leaf-one"></span>
+            <span class="tulip-leaf leaf-two"></span>
+          </div>
+
+          <div class="tulip tulip-center">
+            <span class="tulip-flower"></span>
+            <span class="tulip-stem"></span>
+            <span class="tulip-leaf leaf-one"></span>
+            <span class="tulip-leaf leaf-two"></span>
+          </div>
+
+          <div class="tulip tulip-right">
+            <span class="tulip-flower"></span>
+            <span class="tulip-stem"></span>
+            <span class="tulip-leaf leaf-one"></span>
+            <span class="tulip-leaf leaf-two"></span>
+          </div>
+        </div>
+
+        <button class="primary-button" type="button" data-page="letterPage">
+          Mở lá thư <span>♡</span>
+        </button>
+
+        <p class="small-note">
+          Một lời chúc nhỏ, dành cho những người thật đặc biệt.
+        </p>
+      </div>
+    </section>
+
+    <!-- TRANG 2 -->
+    <section id="letterPage" class="page letter-page">
+      <article class="letter-card">
+        <p class="eyebrow">THƯ CỦA BỌN MÌNH</p>
+        <h2>Gửi những bạn nữ của lớp  <span>♡</span></h2>
+
+        <div class="letter">
+          <p>
+            Nhân ngày 20/10, chúc bạn luôn vui vẻ, tự tin
+            và giữ được nụ cười thật rạng rỡ của mình.
+          </p>
+
+          <p>
+            Mong những ngày đến trường sẽ có thật nhiều kỷ niệm đẹp vào năm học cuối cấp này,
+            những người bạn chân thành và những điều bất ngờ khác.
+          </p>
+
+          <p>
+            Chúc bạn luôn được yêu thương, được lắng nghe
+            và đủ can đảm để theo đuổi những điều mình mơ ước.
+          </p>
+
+          <p class="letter-signature">
+            Chúc một ngày 20/10 thật dui dẻ! 🌷
+          </p>
+        </div>
+
+        <div class="letter-actions">
+          <button class="secondary-button" type="button" data-page="hero">
+            ← Trang đầu
+          </button>
+
+          <button class="primary-button" type="button" data-page="finale">
+            Điều bất ngờ cuối ✧
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- TRANG 3 -->
+    <section id="finale" class="page finale-page">
+      <div class="finale-content">
+        <p class="eyebrow">DÀNH TẶNG BẠN</p>
+        <h2>Hãy luôn tỏa sáng nhé!</h2>
+
+        <p class="finale-subtitle">
+          Thế giới sẽ đẹp hơn khi bạn là chính mình.
+        </p>
+
+        <div class="heart-stage">
+          <canvas id="heartCanvas"
+                  aria-label="Trái tim hạt sáng xoay ba chiều"></canvas>
+        </div>
+
+        <button class="secondary-button" type="button" data-page="hero">
+          ↶ Xem lại từ đầu
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">Made with ♡ for 20/10</footer>
+</body>
+</html>
